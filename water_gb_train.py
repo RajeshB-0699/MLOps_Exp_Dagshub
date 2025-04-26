@@ -9,8 +9,16 @@ import matplotlib
 
 import mlflow.sklearn
 
+
+
+
+import dagshub
+dagshub.init(repo_owner='RajeshB-0699', repo_name='MLOps_Exp_Dagshub', mlflow=True)
+
 mlflow.set_experiment('gbc_water')
-mlflow.set_tracking_uri('http://127.0.0.1:5000')
+mlflow.set_tracking_uri('https://dagshub.com/RajeshB-0699/MLOps_Exp_Dagshub.mlflow')
+
+
 
 
 data = pd.read_csv('D:\exp-mlflow\data\water_potability.csv')
